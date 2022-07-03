@@ -20,7 +20,7 @@ This Game is **strongly inspired** by Denkriesen "Stadt-Land-Vollpfosten" (or Su
 * "Can we play a super funny game"
 
 ## Credits
-Hendrik Roth
+Hendrik Roth (@hendrik-roth)
 
 ## Category
 **Entertainment**
