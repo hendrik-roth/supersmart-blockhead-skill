@@ -3,7 +3,8 @@ Play supersmart blockhead with mycroft
 
 ## About
 Play the game supersmart blockhead game with mycroft. mycroft will read out the questions and you have to answer super quick! intelligence is relative.
-It is really intuitive to play - Mycroft will ask you questions and you have to answer really quick! If you are playing on a Computer, then this Skill will generate you a game-certificate with your answers and your score. Have fun :D!
+It is really intuitive to play - Mycroft will ask you questions and you have to answer really quick! If you are playing on a Computer, then this Skill will generate you a game-certificate with your answers and your score. 
+Sadly only available in English right now. Have fun :D!
 
 
 This Game is **strongly inspired** by Denkriesen "Stadt-Land-Vollpfosten" (or Supersmart Blokhead in English) but with **another questions than the original and just Singleplayer**. It will not replace the original game. Please check them out:
