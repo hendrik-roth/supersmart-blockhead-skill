@@ -5,8 +5,9 @@ from .certificate_generator import CertificateGenerator
 
 
 class Game:
-    def __init__(self, category):
+    def __init__(self, category, question_path):
         self.category = category
+        self.path = question_path
         self.questions = self.load_questions()
         self.answers = {}  # e.g. {"<question>": <answer>, "2":...}
         self.asked_questions = {}  # e.g. {"1": <question>, "2":...}
@@ -22,7 +23,7 @@ class Game:
         :return: questions as list
         :rtype: list
         """
-        path = "./questions/en-US"
+        path = f"{self.path}/questions/en-US"
         q_filename = f"{path}/red-light.txt" if self.category == "red-light" else f"{path}/classic.txt"
         with open(q_filename, "r") as question_file:
             questions = question_file.readlines()

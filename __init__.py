@@ -13,7 +13,8 @@ class SupersmartBlockhead(MycroftSkill):
         if want_instructions:
             self.speak_dialog('instructions')
         category = self.get_response('get.category')
-        game = Game(category)
+        path_to_questions = self.file_system
+        game = Game(category, path_to_questions)
         for i in range(5):
             question = game.ask_question()
             answer = self.get_response('question', {'question': question})
