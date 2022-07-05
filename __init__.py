@@ -17,7 +17,7 @@ class SupersmartBlockhead(MycroftSkill):
         game = Game(category, skill_path)
         for i in range(5):
             question = game.ask_question()
-            answer = self.get_response('question', {'question': question})
+            answer = self.get_response('ask.question', {'question': question})
             game.insert_answer(answer)
         game.generate_certificate()
         self.speak_dialog('end.of.game')
