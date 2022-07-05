@@ -10,7 +10,7 @@ class SupersmartBlockhead(MycroftSkill):
     @intent_file_handler('blockhead.supersmart.intent')
     def handle_blockhead_supersmart(self, message):
         want_instructions = self.ask_yesno('want.instructions')
-        if want_instructions:
+        if want_instructions == 'yes':
             self.speak_dialog('instructions')
         category = self.get_response('get.category')
         skill_path = self.root_dir
