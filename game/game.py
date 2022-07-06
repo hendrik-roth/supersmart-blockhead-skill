@@ -40,7 +40,7 @@ class Game:
         while question in self.asked_questions:
             question = self.questions[random.randint(0, len(self.questions) - 1)]
         self.counter += 1
-        self.asked_questions[self.asked_questions.get(self.counter)] = question
+        self.asked_questions[self.counter] = question
         return question
 
     def insert_answer(self, answer: str):
