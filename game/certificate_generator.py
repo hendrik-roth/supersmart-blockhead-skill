@@ -11,7 +11,7 @@ class CertificateGenerator:
 
     def generate_certificate(self):
         table = ""
-        for q, a in self.answers:
+        for q, a in self.answers.items():
             table += f"""
             <tr>
                 <td>{q}</td>

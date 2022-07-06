@@ -49,7 +49,7 @@ class Game:
 
         :param answer: answer of question
         """
-        self.answers[self.counter] = answer
+        self.answers[self.asked_questions[self.counter]] = answer
 
     def generate_certificate(self):
         generator = CertificateGenerator(self.answers, self.path)
