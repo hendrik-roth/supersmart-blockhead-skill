@@ -38,7 +38,7 @@ class Game:
         """
         question = self.questions[random.randint(0, len(self.questions))]
         while question in self.asked_questions:
-            question = self.questions[random.randint(0, len(self.questions))]
+            question = self.questions[random.randint(0, len(self.questions) - 1)]
         self.counter += 1
         self.asked_questions[self.asked_questions.get(self.counter)] = question
         return question
@@ -52,4 +52,6 @@ class Game:
         self.answers[self.counter] = answer
 
     def generate_certificate(self):
-        generator = CertificateGenerator(self.answers)
+        generator = CertificateGenerator(self.answers, self.path)
+        path = generator.generate_certificate()
+        return path

@@ -1,6 +1,7 @@
 from mycroft import MycroftSkill, intent_file_handler
 
 from .game.game import Game
+import webbrowser
 
 
 class SupersmartBlockhead(MycroftSkill):
@@ -19,7 +20,8 @@ class SupersmartBlockhead(MycroftSkill):
             question = game.ask_question()
             answer = self.get_response('ask.question', {'question': question})
             game.insert_answer(answer)
-        game.generate_certificate()
+        path = game.generate_certificate()
+        webbrowser.open(path)
         self.speak_dialog('end.of.game')
 
 
