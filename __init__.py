@@ -1,4 +1,5 @@
 from mycroft import MycroftSkill, intent_file_handler
+from mycroft.audio import wait_while_speaking
 
 from .game.game import Game
 import webbrowser
@@ -19,6 +20,7 @@ class SupersmartBlockhead(MycroftSkill):
         for i in range(10):
             question = game.ask_question()
             answer = self.get_response('ask.question', {'question': question})
+            wait_while_speaking()
             game.insert_answer(answer)
         path = game.generate_certificate()
         webbrowser.open(path)
