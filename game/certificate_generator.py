@@ -21,7 +21,7 @@ class CertificateGenerator:
         with open(self.template, "r") as template:
             data = template.readlines()
         html = [s.replace("#placeholder", table) for s in data]
-        file = self.out_path + f"{datetime.datetime.now()}_results.html"
+        file = self.out_path + f"{datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}_results.html"
         with open(file, "w+") as outfile:
             outfile.write("".join(html))
         return file
