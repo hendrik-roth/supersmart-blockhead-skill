@@ -7,7 +7,7 @@ class CertificateGenerator:
         self.answers = answers
         self.path = skill_path
         self.out_path = self.path + "/game/output"
-        self.template = self.path + "/game/templates/certificate_generator.html"
+        self.template = self.path + "/game/templates/certificate.html"
 
     def generate_certificate(self):
         table = ""
