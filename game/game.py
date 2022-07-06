@@ -36,7 +36,7 @@ class Game:
         :return: question
         :rtype: str
         """
-        question = self.questions[random.randint(0, len(self.questions))]
+        question = self.questions[random.randint(0, len(self.questions) - 1)]
         while question in self.asked_questions:
             question = self.questions[random.randint(0, len(self.questions) - 1)]
         self.counter += 1
