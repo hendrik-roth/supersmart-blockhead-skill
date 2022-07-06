@@ -17,7 +17,7 @@ class SupersmartBlockhead(MycroftSkill):
         category = self.get_response('get.category')
         skill_path = self.root_dir
         game = Game(category, skill_path)
-        for i in range(10):
+        for i in range(7):
             question = game.ask_question()
             answer = self.get_response('ask.question', {'question': question})
             wait_while_speaking()
