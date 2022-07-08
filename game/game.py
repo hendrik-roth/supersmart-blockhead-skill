@@ -24,7 +24,7 @@ class Game:
         :rtype: list
         """
         path = f"{self.path}/game/questions/en-US"
-        q_filename = f"{path}/red-light.txt" if self.category == "red-light" or self.category == "red light" else f"{path}/classic.txt"
+        q_filename = f"{path}/classic.txt" # red-light not implemented yet
         with open(q_filename, "r") as question_file:
             questions = question_file.readlines()
         return questions
